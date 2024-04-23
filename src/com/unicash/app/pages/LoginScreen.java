@@ -68,7 +68,7 @@ public class LoginScreen extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("CNPJ:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 270, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 270, -1));
 
         btnLogin.setBackground(new java.awt.Color(255, 255, 255));
         btnLogin.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
@@ -87,7 +87,7 @@ public class LoginScreen extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Senha:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 270, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 270, -1));
 
         btnRegister.setBackground(new java.awt.Color(255, 255, 255));
         btnRegister.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
