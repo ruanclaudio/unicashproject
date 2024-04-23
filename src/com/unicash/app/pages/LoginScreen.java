@@ -73,7 +73,8 @@ public class LoginScreen extends javax.swing.JFrame {
         btnLogin.setBackground(new java.awt.Color(255, 255, 255));
         btnLogin.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(0, 0, 0));
-        btnLogin.setText("LOGIN");
+        btnLogin.setText("ENTRAR");
+        btnLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,7 +93,13 @@ public class LoginScreen extends javax.swing.JFrame {
         btnRegister.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(0, 0, 0));
         btnRegister.setText("Cadastrar-se");
+        btnRegister.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 190, 40));
 
         iconLabel.setBackground(new java.awt.Color(0, 0, 51));
@@ -106,6 +113,7 @@ public class LoginScreen extends javax.swing.JFrame {
         passwordIcon.setBackground(new java.awt.Color(255, 255, 255));
         passwordIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/icons/hidePassword.png"))); // NOI18N
         passwordIcon.setBorder(null);
+        passwordIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         passwordIcon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordIconActionPerformed(evt);
@@ -135,6 +143,10 @@ public class LoginScreen extends javax.swing.JFrame {
     private void passwordIconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordIconActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordIconActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments
