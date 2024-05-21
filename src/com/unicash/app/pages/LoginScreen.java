@@ -1,49 +1,44 @@
 package com.unicash.app.pages;
 
+import javax.swing.JOptionPane;
+
 public class LoginScreen extends javax.swing.JFrame {
     public LoginScreen() {
         initComponents();
-        setResizable(false);
-        //tfCNPJ.setBackground(new java.awt.Color(0,0,0,1));
-       //tfPassworld.setBackground(new java.awt.Color(0,0,0,1));
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField2 = new javax.swing.JTextField();
         imagePanel = new javax.swing.JPanel();
         imageLabel = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        loginFormPanel = new javax.swing.JPanel();
         exitLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        titleTxtLabel = new javax.swing.JLabel();
+        txtCNPJ = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JLabel();
         btnRegister = new javax.swing.JButton();
         iconLabel = new javax.swing.JLabel();
         tfCNPJ = new javax.swing.JTextField();
-        passwordIcon = new javax.swing.JButton();
+        showPassBtn = new javax.swing.JToggleButton();
         tfPassword = new javax.swing.JPasswordField();
-
-        jTextField2.setText("jTextField2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imagePanel.setBackground(new java.awt.Color(0, 9, 36));
-        imagePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/images/unicash_icon.png"))); // NOI18N
         imageLabel.setText("jLabel3");
-        imagePanel.add(imageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 490));
+        imagePanel.add(imageLabel);
 
         getContentPane().add(imagePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 490));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        loginFormPanel.setBackground(new java.awt.Color(0, 0, 51));
+        loginFormPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         exitLabel.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         exitLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -55,25 +50,25 @@ public class LoginScreen extends javax.swing.JFrame {
                 exitLabelMouseClicked(evt);
             }
         });
-        jPanel2.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 40, 31));
+        loginFormPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 40, 31));
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("UniCash Login");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 350, -1));
+        titleTxtLabel.setBackground(new java.awt.Color(255, 255, 255));
+        titleTxtLabel.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        titleTxtLabel.setForeground(new java.awt.Color(255, 255, 255));
+        titleTxtLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleTxtLabel.setText("UniCash Login");
+        loginFormPanel.add(titleTxtLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 350, -1));
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CNPJ:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 270, -1));
+        txtCNPJ.setBackground(new java.awt.Color(255, 255, 255));
+        txtCNPJ.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtCNPJ.setForeground(new java.awt.Color(255, 255, 255));
+        txtCNPJ.setText("CNPJ:");
+        loginFormPanel.add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 270, -1));
 
         btnLogin.setBackground(new java.awt.Color(255, 255, 255));
         btnLogin.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(0, 0, 0));
-        btnLogin.setText("ENTRAR");
+        btnLogin.setText("Entrar");
         btnLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -81,16 +76,16 @@ public class LoginScreen extends javax.swing.JFrame {
                 btnLoginActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 150, 40));
+        loginFormPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 200, 40));
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Senha:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 270, -1));
+        txtPassword.setBackground(new java.awt.Color(255, 255, 255));
+        txtPassword.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
+        txtPassword.setText("Senha:");
+        loginFormPanel.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 270, -1));
 
         btnRegister.setBackground(new java.awt.Color(255, 255, 255));
-        btnRegister.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
+        btnRegister.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(0, 0, 0));
         btnRegister.setText("Cadastrar-se");
         btnRegister.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -100,32 +95,31 @@ public class LoginScreen extends javax.swing.JFrame {
                 btnRegisterActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 190, 40));
+        loginFormPanel.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 160, 40));
 
         iconLabel.setBackground(new java.awt.Color(0, 0, 51));
         iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/images/unicash_login_icon.png"))); // NOI18N
-        jPanel2.add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, 83));
+        loginFormPanel.add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, 83));
 
         tfCNPJ.setBackground(new java.awt.Color(255, 255, 255));
         tfCNPJ.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 270, -1));
+        loginFormPanel.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 270, -1));
 
-        passwordIcon.setBackground(new java.awt.Color(255, 255, 255));
-        passwordIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/icons/hidePassword.png"))); // NOI18N
-        passwordIcon.setBorder(null);
-        passwordIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        passwordIcon.addActionListener(new java.awt.event.ActionListener() {
+        showPassBtn.setBackground(new java.awt.Color(255, 255, 255));
+        showPassBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/icons/hidePassword.png"))); // NOI18N
+        showPassBtn.setBorder(null);
+        showPassBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordIconActionPerformed(evt);
+                showPassBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(passwordIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 30, 20));
+        loginFormPanel.add(showPassBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 30, 22));
 
         tfPassword.setBackground(new java.awt.Color(255, 255, 255));
         tfPassword.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 270, -1));
+        loginFormPanel.add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 240, 22));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 430, 490));
+        getContentPane().add(loginFormPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 430, 490));
 
         setSize(new java.awt.Dimension(800, 490));
         setLocationRelativeTo(null);
@@ -137,20 +131,44 @@ public class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_exitLabelMouseClicked
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
+       String cnpj = tfCNPJ.getText();
+       char[] passwordChars = tfPassword.getPassword();
+       
+        if (cnpj.isEmpty() || passwordChars.length == 0) {
+        JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.");
+        return;
+        }
+        
+        String password = new String(passwordChars);
+        
+        if (cnpj.equals("admin") && password.equals("admin")) {
+            JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(this, "CNPJ ou senha inválidos.");
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void passwordIconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordIconActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordIconActionPerformed
-
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
+        RegisterScreen registerFrame = new RegisterScreen();
+        registerFrame.setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void showPassBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPassBtnActionPerformed
+        if (showPassBtn.isSelected()) {
+            tfPassword.setEchoChar((char) 0);
+        } else {
+            tfPassword.setEchoChar('•');
+        }
+    }//GEN-LAST:event_showPassBtnActionPerformed
+
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new LoginScreen().setVisible(true);
+            }
+        });
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
@@ -158,13 +176,12 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JLabel iconLabel;
     private javax.swing.JLabel imageLabel;
     private javax.swing.JPanel imagePanel;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JButton passwordIcon;
+    private javax.swing.JPanel loginFormPanel;
+    private javax.swing.JToggleButton showPassBtn;
     private javax.swing.JTextField tfCNPJ;
     private javax.swing.JPasswordField tfPassword;
+    private javax.swing.JLabel titleTxtLabel;
+    private javax.swing.JLabel txtCNPJ;
+    private javax.swing.JLabel txtPassword;
     // End of variables declaration//GEN-END:variables
 }
