@@ -10,146 +10,172 @@ public class RegisterScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        lblSaida = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        formsPanel = new javax.swing.JPanel();
+        exitLabel = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
+        txtEmpress = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JLabel();
+        txtCNPJ = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JLabel();
         tfPassword = new javax.swing.JPasswordField();
         tfCNPJ = new javax.swing.JTextField();
         tfEmail = new javax.swing.JTextField();
         tfNameEmpress = new javax.swing.JTextField();
-        btnRegisterConfirm = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        registerBtn = new javax.swing.JButton();
+        goBackBtn = new javax.swing.JButton();
+        tfConfirmPass = new javax.swing.JPasswordField();
+        txtConfirmPassword = new javax.swing.JLabel();
+        iconPanel = new javax.swing.JPanel();
+        iconLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 51));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        formsPanel.setBackground(new java.awt.Color(0, 0, 51));
+        formsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblSaida.setBackground(new java.awt.Color(255, 255, 255));
-        lblSaida.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblSaida.setForeground(new java.awt.Color(255, 255, 255));
-        lblSaida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSaida.setText("X");
-        lblSaida.addMouseListener(new java.awt.event.MouseAdapter() {
+        exitLabel.setBackground(new java.awt.Color(255, 255, 255));
+        exitLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        exitLabel.setForeground(new java.awt.Color(255, 255, 255));
+        exitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitLabel.setText("X");
+        exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblSaidaMouseClicked(evt);
+                exitLabelMouseClicked(evt);
             }
         });
-        jPanel2.add(lblSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 0, 42, 31));
+        formsPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 0, 42, 31));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel1.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Unicash Cadastro");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
+        titleLabel.setBackground(new java.awt.Color(0, 0, 51));
+        titleLabel.setFont(new java.awt.Font("Inter", 0, 24)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
+        titleLabel.setText("Unicash Cadastro");
+        formsPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
-        jLabel2.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel2.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nome da Empresa:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+        txtEmpress.setBackground(new java.awt.Color(0, 0, 51));
+        txtEmpress.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtEmpress.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmpress.setText("Nome da Empresa:");
+        formsPanel.add(txtEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
-        jLabel3.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel3.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Email:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        txtEmail.setBackground(new java.awt.Color(0, 0, 51));
+        txtEmail.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmail.setText("Email:");
+        formsPanel.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
-        jLabel4.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel4.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CNPJ:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        txtCNPJ.setBackground(new java.awt.Color(0, 0, 51));
+        txtCNPJ.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtCNPJ.setForeground(new java.awt.Color(255, 255, 255));
+        txtCNPJ.setText("CNPJ:");
+        formsPanel.add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 51));
-        jLabel5.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Senha:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+        txtPassword.setBackground(new java.awt.Color(0, 0, 51));
+        txtPassword.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
+        txtPassword.setText("Senha:");
+        formsPanel.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
         tfPassword.setBackground(new java.awt.Color(255, 255, 255));
         tfPassword.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 290, -1));
+        tfPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfPasswordActionPerformed(evt);
+            }
+        });
+        formsPanel.add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 290, -1));
 
         tfCNPJ.setBackground(new java.awt.Color(255, 255, 255));
         tfCNPJ.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 290, -1));
+        formsPanel.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 290, -1));
 
         tfEmail.setBackground(new java.awt.Color(255, 255, 255));
         tfEmail.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 290, -1));
+        formsPanel.add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 290, -1));
 
         tfNameEmpress.setBackground(new java.awt.Color(255, 255, 255));
         tfNameEmpress.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(tfNameEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 290, -1));
+        formsPanel.add(tfNameEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 290, -1));
 
-        btnRegisterConfirm.setBackground(new java.awt.Color(255, 255, 255));
-        btnRegisterConfirm.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
-        btnRegisterConfirm.setForeground(new java.awt.Color(0, 0, 0));
-        btnRegisterConfirm.setText("Cadastrar");
-        btnRegisterConfirm.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnRegisterConfirm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnRegisterConfirm.addActionListener(new java.awt.event.ActionListener() {
+        registerBtn.setBackground(new java.awt.Color(255, 255, 255));
+        registerBtn.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        registerBtn.setForeground(new java.awt.Color(0, 0, 0));
+        registerBtn.setText("Cadastrar");
+        registerBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        registerBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegisterConfirmActionPerformed(evt);
+                registerBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegisterConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 140, 40));
+        formsPanel.add(registerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 140, 40));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 400, 450));
+        goBackBtn.setBackground(new java.awt.Color(255, 255, 255));
+        goBackBtn.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        goBackBtn.setForeground(new java.awt.Color(0, 0, 0));
+        goBackBtn.setText("Voltar");
+        goBackBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        goBackBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        goBackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goBackBtnActionPerformed(evt);
+            }
+        });
+        formsPanel.add(goBackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 100, 30));
 
-        jLabel8.setBackground(new java.awt.Color(0, 9, 36));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/images/unicash_registerscreen_icon.jpeg"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 450));
+        tfConfirmPass.setBackground(new java.awt.Color(255, 255, 255));
+        tfConfirmPass.setForeground(new java.awt.Color(0, 0, 0));
+        tfConfirmPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfConfirmPassActionPerformed(evt);
+            }
+        });
+        formsPanel.add(tfConfirmPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 290, -1));
 
-        pack();
+        txtConfirmPassword.setBackground(new java.awt.Color(0, 0, 51));
+        txtConfirmPassword.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtConfirmPassword.setForeground(new java.awt.Color(255, 255, 255));
+        txtConfirmPassword.setText("Confirmar senha:");
+        formsPanel.add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+
+        getContentPane().add(formsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 400, 490));
+
+        iconPanel.setBackground(new java.awt.Color(0, 9, 36));
+
+        iconLabel.setBackground(new java.awt.Color(0, 9, 36));
+        iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/images/unicash_registerscreen_icon.jpeg"))); // NOI18N
+        iconPanel.add(iconLabel);
+
+        getContentPane().add(iconPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 490));
+
+        setSize(new java.awt.Dimension(800, 490));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblSaidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSaidaMouseClicked
+    private void exitLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLabelMouseClicked
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_lblSaidaMouseClicked
+    }//GEN-LAST:event_exitLabelMouseClicked
 
-    private void btnRegisterConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterConfirmActionPerformed
+    private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegisterConfirmActionPerformed
+    }//GEN-LAST:event_registerBtnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPasswordActionPerformed
+
+    private void goBackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackBtnActionPerformed
+        LoginScreen loginFrame = new LoginScreen();
+        loginFrame.setVisible(true);
+    }//GEN-LAST:event_goBackBtnActionPerformed
+
+    private void tfConfirmPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfConfirmPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfConfirmPassActionPerformed
+
 //    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(RegisterScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(RegisterScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(RegisterScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(RegisterScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//        //</editor-fold>
-//
-//        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
 //                new RegisterScreen().setVisible(true);
@@ -158,18 +184,22 @@ public class RegisterScreen extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRegisterConfirm;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lblSaida;
+    private javax.swing.JLabel exitLabel;
+    private javax.swing.JPanel formsPanel;
+    private javax.swing.JButton goBackBtn;
+    private javax.swing.JLabel iconLabel;
+    private javax.swing.JPanel iconPanel;
+    private javax.swing.JButton registerBtn;
     private javax.swing.JTextField tfCNPJ;
+    private javax.swing.JPasswordField tfConfirmPass;
     private javax.swing.JTextField tfEmail;
     private javax.swing.JTextField tfNameEmpress;
     private javax.swing.JPasswordField tfPassword;
+    private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel txtCNPJ;
+    private javax.swing.JLabel txtConfirmPassword;
+    private javax.swing.JLabel txtEmail;
+    private javax.swing.JLabel txtEmpress;
+    private javax.swing.JLabel txtPassword;
     // End of variables declaration//GEN-END:variables
 }
