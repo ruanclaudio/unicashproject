@@ -1,6 +1,7 @@
-package main.app.pages;
+package main.view;
 
 import javax.swing.JOptionPane;
+import main.model.DAO.UserDAO;
 
 public class LoginPage extends javax.swing.JFrame {
     public LoginPage() {
@@ -139,13 +140,16 @@ public class LoginPage extends javax.swing.JFrame {
        char[] passwordChars = tfPassword.getPassword();
        
         if (cnpj.isEmpty() || passwordChars.length == 0) {
-        JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.");
-        return;
+            JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.");
+            return;
         }
         
         String password = new String(passwordChars);
         
-        if (cnpj.equals("admin") && password.equals("admin")) {
+        UserDAO userDAO = new UserDAO();
+        boolean sucessLogin = userDAO.verifyLogin(cnpj, password);
+        
+        if (sucessLogin) {
             MainPage mainDb = new MainPage();
             mainDb.setVisible(true);
         } else {
@@ -154,6 +158,7 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        dispose();
         RegisterPage registerFrame = new RegisterPage();
         registerFrame.setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed

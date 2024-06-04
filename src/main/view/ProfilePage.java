@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package main.app.pages;
+package main.view;
 
 /**
  *
  * @author ruanc
  */
-public class AlertsPage extends javax.swing.JFrame {
+public class ProfilePage extends javax.swing.JFrame {
 
     /**
-     * Creates new form AlertsPage
+     * Creates new form ProfilePage
      */
-    public AlertsPage() {
+    public ProfilePage() {
         initComponents();
     }
 
@@ -30,8 +30,17 @@ public class AlertsPage extends javax.swing.JFrame {
         logoHeader = new javax.swing.JLabel();
         titleLabel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
-        messageLabel = new javax.swing.JLabel();
-        messageArea1 = new javax.swing.JLabel();
+        profileNameLabel = new javax.swing.JLabel();
+        profileImage = new javax.swing.JLabel();
+        empressTxtArea = new javax.swing.JLabel();
+        textLabel = new javax.swing.JLabel();
+        editProfileBtn = new javax.swing.JButton();
+        personalNameLabel = new javax.swing.JLabel();
+        persNameTxtArea = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        emailTxtArea = new javax.swing.JLabel();
+        cnpjTxtArea = new javax.swing.JLabel();
+        cnpjLabel = new javax.swing.JLabel();
         divisorPanel = new javax.swing.JPanel();
         menuPanel = new javax.swing.JPanel();
         wellcome = new javax.swing.JLabel();
@@ -50,53 +59,144 @@ public class AlertsPage extends javax.swing.JFrame {
         setResizable(false);
 
         headerPanel.setBackground(new java.awt.Color(1, 8, 34));
-        headerPanel.setMaximumSize(new java.awt.Dimension(751, 80));
         headerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoHeader.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
         logoHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoHeader.setIcon(new javax.swing.ImageIcon("src/resource/image/unicash_icon_removebg.png"));
+        logoHeader.setText("unicash_logo");
         headerPanel.add(logoHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 90, 80));
 
         titleLabel.setFont(new java.awt.Font("Inter", 1, 48)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLabel.setText("UniCash");
-        headerPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 10, 860, -1));
+        headerPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 860, -1));
 
         mainPanel.setBackground(new java.awt.Color(217, 217, 217));
-        mainPanel.setMaximumSize(new java.awt.Dimension(870, 520));
 
-        messageLabel.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
-        messageLabel.setForeground(new java.awt.Color(0, 0, 0));
-        messageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        messageLabel.setText("CAIXA DE ENTRADA");
+        profileNameLabel.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        profileNameLabel.setForeground(new java.awt.Color(0, 0, 0));
+        profileNameLabel.setText("NOME DA EMPRESA");
+        profileNameLabel.setAlignmentY(0.0F);
 
-        messageArea1.setBackground(new java.awt.Color(153, 153, 153));
-        messageArea1.setFont(new java.awt.Font("Inter", 0, 13)); // NOI18N
-        messageArea1.setForeground(new java.awt.Color(0, 0, 0));
-        messageArea1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        messageArea1.setText("SUA CAIXA DE MENSAGENS ESTÁ VAZIA");
-        messageArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 102)));
+        profileImage.setBackground(new java.awt.Color(1, 8, 34));
+        profileImage.setForeground(new java.awt.Color(1, 8, 34));
+        profileImage.setText("           FOTO DE PERFIL");
+        profileImage.setToolTipText("");
+        profileImage.setAlignmentY(0.0F);
+        profileImage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        profileImage.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        profileImage.setMaximumSize(new java.awt.Dimension(120, 20));
+        profileImage.setMinimumSize(new java.awt.Dimension(120, 20));
+        profileImage.setName(""); // NOI18N
+
+        empressTxtArea.setBackground(new java.awt.Color(204, 204, 204));
+        empressTxtArea.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        empressTxtArea.setForeground(new java.awt.Color(0, 0, 0));
+        empressTxtArea.setText("NOME DA EMPRESA");
+        empressTxtArea.setBorder(new javax.swing.border.MatteBorder(null));
+
+        textLabel.setFont(new java.awt.Font("Inter", 1, 18)); // NOI18N
+        textLabel.setForeground(new java.awt.Color(0, 0, 0));
+        textLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        textLabel.setText("PERFIL DO USUÁRIO");
+
+        editProfileBtn.setBackground(new java.awt.Color(1, 8, 34));
+        editProfileBtn.setFont(new java.awt.Font("Inter", 0, 13)); // NOI18N
+        editProfileBtn.setForeground(new java.awt.Color(255, 255, 255));
+        editProfileBtn.setText("Editar Perfil");
+        editProfileBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editProfileBtnActionPerformed(evt);
+            }
+        });
+
+        personalNameLabel.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        personalNameLabel.setForeground(new java.awt.Color(0, 0, 0));
+        personalNameLabel.setText("NOME DA PESSOA FISICA");
+        personalNameLabel.setAlignmentY(0.0F);
+
+        persNameTxtArea.setBackground(new java.awt.Color(204, 204, 204));
+        persNameTxtArea.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        persNameTxtArea.setForeground(new java.awt.Color(0, 0, 0));
+        persNameTxtArea.setText("NOME DA PESSOA DONA DA EMPRESA");
+        persNameTxtArea.setBorder(new javax.swing.border.MatteBorder(null));
+
+        emailLabel.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(0, 0, 0));
+        emailLabel.setText("E-MAIL");
+        emailLabel.setAlignmentY(0.0F);
+
+        emailTxtArea.setBackground(new java.awt.Color(204, 204, 204));
+        emailTxtArea.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        emailTxtArea.setForeground(new java.awt.Color(0, 0, 0));
+        emailTxtArea.setText("E-MAIL DA EMPRESA");
+        emailTxtArea.setBorder(new javax.swing.border.MatteBorder(null));
+
+        cnpjTxtArea.setBackground(new java.awt.Color(204, 204, 204));
+        cnpjTxtArea.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        cnpjTxtArea.setForeground(new java.awt.Color(0, 0, 0));
+        cnpjTxtArea.setText("CNPJ DA EMPRESA");
+        cnpjTxtArea.setBorder(new javax.swing.border.MatteBorder(null));
+
+        cnpjLabel.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
+        cnpjLabel.setForeground(new java.awt.Color(0, 0, 0));
+        cnpjLabel.setText("CNPJ");
+        cnpjLabel.setAlignmentY(0.0F);
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(messageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(messageArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+            .addGroup(mainPanelLayout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(profileNameLabel)
+                    .addComponent(empressTxtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(personalNameLabel)
+                    .addComponent(persNameTxtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailLabel)
+                    .addComponent(emailTxtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cnpjLabel)
+                    .addComponent(cnpjTxtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(profileImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                        .addComponent(editProfileBtn)
+                        .addGap(23, 23, 23)))
+                .addGap(102, 102, 102))
+            .addComponent(textLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(messageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(146, 146, 146)
-                .addComponent(messageArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addComponent(textLabel)
+                .addGap(58, 58, 58)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(profileNameLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(empressTxtArea)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(personalNameLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(persNameTxtArea)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(emailLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(emailTxtArea)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cnpjLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cnpjTxtArea))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(profileImage, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(editProfileBtn)))
+                .addGap(0, 171, Short.MAX_VALUE))
         );
 
         divisorPanel.setBackground(new java.awt.Color(1, 8, 34));
@@ -191,7 +291,7 @@ public class AlertsPage extends javax.swing.JFrame {
                             .addComponent(optAlert)))
                     .addComponent(iconProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(45, Short.MAX_VALUE))
-            .addComponent(wellcome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(wellcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,7 +328,9 @@ public class AlertsPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1125, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 255, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -237,22 +339,21 @@ public class AlertsPage extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, 0)
-                            .addComponent(divisorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, 0)
-                            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(divisorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 80, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(divisorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(divisorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -263,6 +364,11 @@ public class AlertsPage extends javax.swing.JFrame {
     private void optProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_optProfileMouseClicked
 
     }//GEN-LAST:event_optProfileMouseClicked
+
+    private void editProfileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editProfileBtnActionPerformed
+        EditProfilePage editPf = new EditProfilePage();
+        editPf.setVisible(true);
+    }//GEN-LAST:event_editProfileBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -281,26 +387,32 @@ public class AlertsPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlertsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlertsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlertsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlertsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AlertsPage().setVisible(true);
+                new ProfilePage().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel cnpjLabel;
+    private javax.swing.JLabel cnpjTxtArea;
     private javax.swing.JPanel divisorPanel;
+    private javax.swing.JButton editProfileBtn;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JLabel emailTxtArea;
+    private javax.swing.JLabel empressTxtArea;
     private javax.swing.JPanel headerPanel;
     private javax.swing.JLabel iconAlerts;
     private javax.swing.JLabel iconDashboard;
@@ -310,13 +422,16 @@ public class AlertsPage extends javax.swing.JFrame {
     private javax.swing.JLabel logoHeader;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel menuPanel;
-    private javax.swing.JLabel messageArea1;
-    private javax.swing.JLabel messageLabel;
     private javax.swing.JLabel optAlert;
     private javax.swing.JLabel optDashboard;
     private javax.swing.JLabel optProfile;
     private javax.swing.JLabel optSell;
     private javax.swing.JLabel optSettings;
+    private javax.swing.JLabel persNameTxtArea;
+    private javax.swing.JLabel personalNameLabel;
+    private javax.swing.JLabel profileImage;
+    private javax.swing.JLabel profileNameLabel;
+    private javax.swing.JLabel textLabel;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JLabel wellcome;
     // End of variables declaration//GEN-END:variables

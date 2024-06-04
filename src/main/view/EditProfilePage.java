@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package main.app.pages;
+package main.view;
 
 /**
  *
@@ -42,9 +42,7 @@ public class EditProfilePage extends javax.swing.JFrame {
         goBackBtn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(870, 520));
         setMinimumSize(new java.awt.Dimension(870, 520));
-        setPreferredSize(new java.awt.Dimension(870, 520));
         setResizable(false);
 
         editProfilePane.setBackground(new java.awt.Color(217, 217, 217));

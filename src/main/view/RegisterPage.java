@@ -1,4 +1,8 @@
-package main.app.pages;
+package main.view;
+
+import javax.swing.JOptionPane;
+import main.model.DAO.UserDAO;
+import main.model.entities.UserEntity;
 
 public class RegisterPage extends javax.swing.JFrame {
     public RegisterPage() {
@@ -13,18 +17,20 @@ public class RegisterPage extends javax.swing.JFrame {
         formsPanel = new javax.swing.JPanel();
         exitLabel = new javax.swing.JLabel();
         titleLabel = new javax.swing.JLabel();
-        txtEmpress = new javax.swing.JLabel();
+        txtUserName = new javax.swing.JLabel();
         txtEmail = new javax.swing.JLabel();
         txtCNPJ = new javax.swing.JLabel();
         txtPassword = new javax.swing.JLabel();
         tfPassword = new javax.swing.JPasswordField();
         tfCNPJ = new javax.swing.JTextField();
         tfEmail = new javax.swing.JTextField();
-        tfNameEmpress = new javax.swing.JTextField();
+        tfUserName = new javax.swing.JTextField();
         registerBtn = new javax.swing.JButton();
         goBackBtn = new javax.swing.JButton();
         tfConfirmPass = new javax.swing.JPasswordField();
         txtConfirmPassword = new javax.swing.JLabel();
+        txtEmpress = new javax.swing.JLabel();
+        tfNameEmpress = new javax.swing.JTextField();
         iconPanel = new javax.swing.JPanel();
         registerImageLabel = new javax.swing.JLabel();
 
@@ -54,29 +60,29 @@ public class RegisterPage extends javax.swing.JFrame {
         titleLabel.setText("Unicash Cadastro");
         formsPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 400, -1));
 
-        txtEmpress.setBackground(new java.awt.Color(0, 0, 51));
-        txtEmpress.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
-        txtEmpress.setForeground(new java.awt.Color(255, 255, 255));
-        txtEmpress.setText("Nome da Empresa:");
-        formsPanel.add(txtEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        txtUserName.setBackground(new java.awt.Color(0, 0, 51));
+        txtUserName.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtUserName.setForeground(new java.awt.Color(255, 255, 255));
+        txtUserName.setText("Nome de Usuário:");
+        formsPanel.add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
         txtEmail.setBackground(new java.awt.Color(0, 0, 51));
         txtEmail.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         txtEmail.setForeground(new java.awt.Color(255, 255, 255));
         txtEmail.setText("Email:");
-        formsPanel.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+        formsPanel.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         txtCNPJ.setBackground(new java.awt.Color(0, 0, 51));
         txtCNPJ.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         txtCNPJ.setForeground(new java.awt.Color(255, 255, 255));
         txtCNPJ.setText("CNPJ:");
-        formsPanel.add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+        formsPanel.add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         txtPassword.setBackground(new java.awt.Color(0, 0, 51));
         txtPassword.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(255, 255, 255));
         txtPassword.setText("Senha:");
-        formsPanel.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        formsPanel.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
 
         tfPassword.setBackground(new java.awt.Color(255, 255, 255));
         tfPassword.setForeground(new java.awt.Color(0, 0, 0));
@@ -85,19 +91,19 @@ public class RegisterPage extends javax.swing.JFrame {
                 tfPasswordActionPerformed(evt);
             }
         });
-        formsPanel.add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 290, -1));
+        formsPanel.add(tfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 290, -1));
 
         tfCNPJ.setBackground(new java.awt.Color(255, 255, 255));
         tfCNPJ.setForeground(new java.awt.Color(0, 0, 0));
-        formsPanel.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 290, -1));
+        formsPanel.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 290, -1));
 
         tfEmail.setBackground(new java.awt.Color(255, 255, 255));
         tfEmail.setForeground(new java.awt.Color(0, 0, 0));
-        formsPanel.add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 290, -1));
+        formsPanel.add(tfEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 290, -1));
 
-        tfNameEmpress.setBackground(new java.awt.Color(255, 255, 255));
-        tfNameEmpress.setForeground(new java.awt.Color(0, 0, 0));
-        formsPanel.add(tfNameEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 290, -1));
+        tfUserName.setBackground(new java.awt.Color(255, 255, 255));
+        tfUserName.setForeground(new java.awt.Color(0, 0, 0));
+        formsPanel.add(tfUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 290, -1));
 
         registerBtn.setBackground(new java.awt.Color(255, 255, 255));
         registerBtn.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
@@ -110,7 +116,7 @@ public class RegisterPage extends javax.swing.JFrame {
                 registerBtnActionPerformed(evt);
             }
         });
-        formsPanel.add(registerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 140, 40));
+        formsPanel.add(registerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 140, 40));
 
         goBackBtn.setBackground(new java.awt.Color(255, 255, 255));
         goBackBtn.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
@@ -123,7 +129,7 @@ public class RegisterPage extends javax.swing.JFrame {
                 goBackBtnActionPerformed(evt);
             }
         });
-        formsPanel.add(goBackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 100, 30));
+        formsPanel.add(goBackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 100, 30));
 
         tfConfirmPass.setBackground(new java.awt.Color(255, 255, 255));
         tfConfirmPass.setForeground(new java.awt.Color(0, 0, 0));
@@ -132,13 +138,23 @@ public class RegisterPage extends javax.swing.JFrame {
                 tfConfirmPassActionPerformed(evt);
             }
         });
-        formsPanel.add(tfConfirmPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 290, -1));
+        formsPanel.add(tfConfirmPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 290, -1));
 
         txtConfirmPassword.setBackground(new java.awt.Color(0, 0, 51));
         txtConfirmPassword.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
         txtConfirmPassword.setForeground(new java.awt.Color(255, 255, 255));
         txtConfirmPassword.setText("Confirmar senha:");
-        formsPanel.add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
+        formsPanel.add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
+
+        txtEmpress.setBackground(new java.awt.Color(0, 0, 51));
+        txtEmpress.setFont(new java.awt.Font("Inter", 1, 13)); // NOI18N
+        txtEmpress.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmpress.setText("Nome da Empresa:");
+        formsPanel.add(txtEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+
+        tfNameEmpress.setBackground(new java.awt.Color(255, 255, 255));
+        tfNameEmpress.setForeground(new java.awt.Color(0, 0, 0));
+        formsPanel.add(tfNameEmpress, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 290, -1));
 
         getContentPane().add(formsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 400, 490));
 
@@ -161,7 +177,33 @@ public class RegisterPage extends javax.swing.JFrame {
     }//GEN-LAST:event_exitLabelMouseClicked
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
-        // TODO add your handling code here:
+      try {
+          char [] passwordChars = tfPassword.getPassword();
+          char [] confPasswordChars = tfConfirmPass.getPassword();
+          String password = new String(passwordChars);
+          String confirmPassword = new String(confPasswordChars);
+          
+          if (!tfCNPJ.getText().isEmpty() || !tfNameEmpress.getText().isEmpty() || !tfUserName.getText().isEmpty() || !tfEmail.getText().isEmpty()
+                || !password.isEmpty() || !confirmPassword.isEmpty()) {
+            if(!password.equals(confirmPassword)) {
+                JOptionPane.showMessageDialog(null, "As senhas não coincidem.");
+            }
+
+            UserDAO dao = new UserDAO();
+            UserEntity newUser = new UserEntity(tfCNPJ.getText(), tfNameEmpress.getText(), tfUserName.getText(), tfEmail.getText(), password);
+            dao.createNewUser(newUser);
+              
+            dispose();
+            LoginPage loginFrame = new LoginPage();
+            loginFrame.setVisible(true);
+              
+          } else {
+              JOptionPane.showMessageDialog(null, "Todos os campos precisam estar preenchidos para que o cadastro seja realizado.");
+          }
+          
+      } catch (Exception e) {
+          
+      }
     }//GEN-LAST:event_registerBtnActionPerformed
 
     private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
@@ -169,6 +211,7 @@ public class RegisterPage extends javax.swing.JFrame {
     }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void goBackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackBtnActionPerformed
+        dispose();
         LoginPage loginFrame = new LoginPage();
         loginFrame.setVisible(true);
     }//GEN-LAST:event_goBackBtnActionPerformed
@@ -197,11 +240,13 @@ public class RegisterPage extends javax.swing.JFrame {
     private javax.swing.JTextField tfEmail;
     private javax.swing.JTextField tfNameEmpress;
     private javax.swing.JPasswordField tfPassword;
+    private javax.swing.JTextField tfUserName;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JLabel txtCNPJ;
     private javax.swing.JLabel txtConfirmPassword;
     private javax.swing.JLabel txtEmail;
     private javax.swing.JLabel txtEmpress;
     private javax.swing.JLabel txtPassword;
+    private javax.swing.JLabel txtUserName;
     // End of variables declaration//GEN-END:variables
 }

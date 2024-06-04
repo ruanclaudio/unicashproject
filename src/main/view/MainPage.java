@@ -1,4 +1,4 @@
-package main.app.pages;
+package main.view;
 
 import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
