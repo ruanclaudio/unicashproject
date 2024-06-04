@@ -177,33 +177,31 @@ public class RegisterPage extends javax.swing.JFrame {
     }//GEN-LAST:event_exitLabelMouseClicked
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
-      try {
-          char [] passwordChars = tfPassword.getPassword();
-          char [] confPasswordChars = tfConfirmPass.getPassword();
-          String password = new String(passwordChars);
-          String confirmPassword = new String(confPasswordChars);
-          
-          if (!tfCNPJ.getText().isEmpty() || !tfNameEmpress.getText().isEmpty() || !tfUserName.getText().isEmpty() || !tfEmail.getText().isEmpty()
-                || !password.isEmpty() || !confirmPassword.isEmpty()) {
-            if(!password.equals(confirmPassword)) {
-                JOptionPane.showMessageDialog(null, "As senhas não coincidem.");
+        try {
+            char[] passwordChars = tfPassword.getPassword();
+            char[] confPasswordChars = tfConfirmPass.getPassword();
+            String password = new String(passwordChars);
+            String confirmPassword = new String(confPasswordChars);
+
+            if (tfCNPJ.getText().isEmpty() || tfNameEmpress.getText().isEmpty() || tfUserName.getText().isEmpty() || tfEmail.getText().isEmpty()
+                || password.isEmpty() || confirmPassword.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Todos os campos precisam estar preenchidos para que o cadastro seja realizado.");
+                return;
             }
 
-            UserDAO dao = new UserDAO();
+            if (!password.equals(confirmPassword)) {
+                JOptionPane.showMessageDialog(null, "As senhas não coincidem.");
+                return;
+            }
+
+            UserDAO uDAO = new UserDAO();
             UserEntity newUser = new UserEntity(tfCNPJ.getText(), tfNameEmpress.getText(), tfUserName.getText(), tfEmail.getText(), password);
-            dao.createNewUser(newUser);
-              
-            dispose();
-            LoginPage loginFrame = new LoginPage();
-            loginFrame.setVisible(true);
-              
-          } else {
-              JOptionPane.showMessageDialog(null, "Todos os campos precisam estar preenchidos para que o cadastro seja realizado.");
-          }
-          
-      } catch (Exception e) {
-          
-      }
+            uDAO.createNewUser(newUser);
+
+            setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_registerBtnActionPerformed
 
     private void tfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPasswordActionPerformed
@@ -211,9 +209,7 @@ public class RegisterPage extends javax.swing.JFrame {
     }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void goBackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackBtnActionPerformed
-        dispose();
-        LoginPage loginFrame = new LoginPage();
-        loginFrame.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_goBackBtnActionPerformed
 
     private void tfConfirmPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfConfirmPassActionPerformed

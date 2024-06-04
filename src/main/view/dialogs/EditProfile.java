@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package main.view;
+package main.view.dialogs;
 
 /**
  *
  * @author ruanc
  */
-public class EditProfilePage extends javax.swing.JFrame {
+public class EditProfile extends javax.swing.JFrame {
 
     /**
      * Creates new form EditeProfilePage
      */
-    public EditProfilePage() {
+    public EditProfile() {
         initComponents();
     }
 
@@ -39,14 +39,15 @@ public class EditProfilePage extends javax.swing.JFrame {
         persNameTxtFiled = new javax.swing.JTextField();
         persNameTxtFiled3 = new javax.swing.JTextField();
         persNameTxtFiled4 = new javax.swing.JTextField();
-        goBackBtn = new javax.swing.JLabel();
+        returnLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(870, 520));
+        setPreferredSize(new java.awt.Dimension(820, 550));
         setResizable(false);
 
         editProfilePane.setBackground(new java.awt.Color(217, 217, 217));
-        editProfilePane.setPreferredSize(new java.awt.Dimension(800, 500));
+        editProfilePane.setPreferredSize(new java.awt.Dimension(870, 520));
 
         profileNameLabel.setFont(new java.awt.Font("Inter", 0, 18)); // NOI18N
         profileNameLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -133,7 +134,13 @@ public class EditProfilePage extends javax.swing.JFrame {
             }
         });
 
-        goBackBtn.setIcon(new javax.swing.ImageIcon("src/resource/icons/previous_black.png"));
+        returnLabel.setIcon(new javax.swing.ImageIcon("src/resource/icons/previous_black.png"));
+        returnLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        returnLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                returnLabelMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout editProfilePaneLayout = new javax.swing.GroupLayout(editProfilePane);
         editProfilePane.setLayout(editProfilePaneLayout);
@@ -162,23 +169,23 @@ public class EditProfilePage extends javax.swing.JFrame {
                 .addGap(67, 67, 67))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editProfilePaneLayout.createSequentialGroup()
                 .addGap(335, 335, 335)
-                .addComponent(saveBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(saveBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                 .addGap(317, 317, 317))
-            .addGroup(editProfilePaneLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(goBackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(editProfilePaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(textLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(editProfilePaneLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(returnLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         editProfilePaneLayout.setVerticalGroup(
             editProfilePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editProfilePaneLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(goBackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(returnLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(textLabel)
                 .addGap(58, 58, 58)
                 .addComponent(profileNameLabel)
@@ -202,7 +209,7 @@ public class EditProfilePage extends javax.swing.JFrame {
                         .addComponent(profileImage, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(editProfileBtn)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -211,14 +218,14 @@ public class EditProfilePage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(editProfilePane, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
+            .addComponent(editProfilePane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(editProfilePane, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
+            .addComponent(editProfilePane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(812, 512));
+        setSize(new java.awt.Dimension(886, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -246,6 +253,10 @@ public class EditProfilePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_persNameTxtFiled4ActionPerformed
 
+    private void returnLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_returnLabelMouseClicked
+        dispose();
+    }//GEN-LAST:event_returnLabelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -263,21 +274,23 @@ public class EditProfilePage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditProfilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditProfilePage().setVisible(true);
+                new EditProfile().setVisible(true);
             }
         });
     }
@@ -288,13 +301,13 @@ public class EditProfilePage extends javax.swing.JFrame {
     private javax.swing.JPanel editProfilePane;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField empNameTxtFiled;
-    private javax.swing.JLabel goBackBtn;
     private javax.swing.JTextField persNameTxtFiled;
     private javax.swing.JTextField persNameTxtFiled3;
     private javax.swing.JTextField persNameTxtFiled4;
     private javax.swing.JLabel personalNameLabel;
     private javax.swing.JLabel profileImage;
     private javax.swing.JLabel profileNameLabel;
+    private javax.swing.JLabel returnLabel;
     private javax.swing.JButton saveBtn;
     private javax.swing.JLabel textLabel;
     // End of variables declaration//GEN-END:variables

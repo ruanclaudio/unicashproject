@@ -150,6 +150,7 @@ public class LoginPage extends javax.swing.JFrame {
         boolean sucessLogin = userDAO.verifyLogin(cnpj, password);
         
         if (sucessLogin) {
+            setVisible(false);
             MainPage mainDb = new MainPage();
             mainDb.setVisible(true);
         } else {
@@ -158,7 +159,6 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        dispose();
         RegisterPage registerFrame = new RegisterPage();
         registerFrame.setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed
@@ -171,13 +171,13 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_showPassBtnActionPerformed
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LoginPage().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new LoginPage().setVisible(true);
+//            }
+//        });
+//    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;

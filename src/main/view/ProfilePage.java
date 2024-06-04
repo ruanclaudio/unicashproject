@@ -4,6 +4,8 @@
  */
 package main.view;
 
+import main.view.dialogs.EditProfile;
+
 /**
  *
  * @author ruanc
@@ -366,7 +368,7 @@ public class ProfilePage extends javax.swing.JFrame {
     }//GEN-LAST:event_optProfileMouseClicked
 
     private void editProfileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editProfileBtnActionPerformed
-        EditProfilePage editPf = new EditProfilePage();
+        EditProfile editPf = new EditProfile();
         editPf.setVisible(true);
     }//GEN-LAST:event_editProfileBtnActionPerformed
 

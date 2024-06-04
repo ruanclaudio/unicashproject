@@ -3,11 +3,11 @@ package main;
 import main.view.LoginPage;
 import java.awt.EventQueue;
 import java.lang.reflect.InvocationTargetException;
-import main.model.SQLConnection;
+import main.model.ConnectionFactory;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException, InvocationTargetException {
-        SQLConnection sqlConector = new SQLConnection();
+        ConnectionFactory sqlConector = new ConnectionFactory();
         sqlConector.getConnection();
         sqlConector.initializeDatabase();
         
