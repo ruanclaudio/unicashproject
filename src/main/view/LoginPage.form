@@ -44,8 +44,8 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="loginImageLabel">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/image/unicash_image_removebg.png&quot;)" type="code"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/image/unicash_image_removebg.png"/>
             </Property>
           </Properties>
         </Component>
@@ -76,8 +76,8 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/icons/close_white.png&quot;)" type="code"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/close_w.png"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
@@ -218,8 +218,8 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Inter" size="12" style="0"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/image/unicash_icon_removebg.png&quot;)" type="code"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/image/unicash_icon_removebg.png"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
@@ -253,7 +253,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/unicash/app/assets/icons/hidePassword.png"/>
+              <Image iconType="3" name="/resource/icons/show.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

@@ -21,8 +21,8 @@ public class ConnectionFactory {
             return connection;
             
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Erro de conexão");
-            return null;
+            JOptionPane.showMessageDialog(null, "Erro de conexão: " + e.getMessage());
+            throw new RuntimeException("Falha ao conectar ao banco de dados", e);
         }
     }
     
@@ -32,6 +32,7 @@ public class ConnectionFactory {
             String checkDatabaseSQL = "SHOW DATABASES LIKE 'unicashdb'";
             return statement.executeQuery(checkDatabaseSQL).next();
         } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao verificar o banco de dados: " + e.getMessage());
             return false;
         }
     }
@@ -62,44 +63,32 @@ public class ConnectionFactory {
             String createProductTableSQL = "CREATE TABLE IF NOT EXISTS Products ("
                     + "prod_id INT AUTO_INCREMENT PRIMARY KEY, "
                     + "prod_name VARCHAR(100) NOT NULL, "
-                    + "prod_qnt INT NOT NULL,"
-                    + "prod_cost DOUBLE NOT NULL,"
-                    + "prod_price DOUBLE NOT NULL,"
-                    + "prod_profit DOUBLE"
+                    + "prod_qty INT NOT NULL,"
+                    + "prod_cost DECIMAL(10,2) NOT NULL,"
+                    + "prod_price DECIMAL(10,2) NOT NULL,"
+                    + "prod_profit DECIMAL(10,2)"
                     + ")";
             statement.executeUpdate(createProductTableSQL);
             
-            // Cria a tabela de produtos
+            // Cria a tabela de materiais
             String createMaterialsTableSQL = "CREATE TABLE IF NOT EXISTS Materials ("
-                    + "materials_id INT AUTO_INCREMENT PRIMARY KEY, "
+                    + "mat_id INT AUTO_INCREMENT PRIMARY KEY, "
                     + "mat_name VARCHAR(100) NOT NULL, "
-                    + "mat_cost DECIMAL(10, 2) NOT NULL,"
-                    + "mat_qnt DOUBLE NOT NULL"
+                    + "mat_cost DECIMAL(10,2) NOT NULL,"
+                    + "mat_qty DECIMAL(10,2) NOT NULL,"
+                    + "mat_qtyType VARCHAR(50) NOT NULL"
                     + ")";
             statement.executeUpdate(createMaterialsTableSQL);
 
             System.out.println("Banco de dados criado com sucesso");
 
          } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Falha ao criar o Banco de Dados.");
+            JOptionPane.showMessageDialog(null, "Falha ao criar o Banco de Dados: " + e.getMessage());
+            throw new RuntimeException("Falha ao criar o banco de dados", e);
          }
     }
     
-    public static void closeConnection(Connection con) {
-        try {
-            if(con!=null) {
-                con.close();
-            }
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-        
-    public static void closeConnection(Connection con, PreparedStatement stmt) {
-        closeConnection(con);
-        
+    public static void closeConnection(PreparedStatement stmt) {
         try {
             if(stmt!=null) {
                 stmt.close();
@@ -109,13 +98,27 @@ public class ConnectionFactory {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-            
-    public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs) {
-        closeConnection(con, stmt);
+    
+        
+    public static void closeConnection(PreparedStatement stmt, ResultSet rs) {
+        closeConnection(stmt);
         
         try {
             if(rs!=null) {
                 rs.close();
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+            
+    public static void closeConnection(PreparedStatement stmt, ResultSet rs, Connection con) {
+        closeConnection(stmt, rs);
+        
+        try {
+            if(con!=null) {
+                con.close();
             }
             
         } catch (SQLException ex) {

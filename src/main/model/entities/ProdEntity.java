@@ -3,14 +3,14 @@ package main.model.entities;
 public class ProdEntity {
     private int prod_id;
     private String prod_name;
-    private int prod_qnt;
+    private int prod_qty;
     private double prod_cost;
     private double prod_price;
     private double prod_profit;
     
-    public ProdEntity(String prod_name, int prod_qnt, double prod_cost, double prod_price) {
+    public ProdEntity(String prod_name, int prod_qty, double prod_cost, double prod_price) {
         this.prod_name = prod_name;
-        this.prod_qnt = prod_qnt;
+        this.prod_qty = prod_qty;
         this.prod_cost = prod_cost;
         this.prod_price = prod_price;
         this.prod_profit = calculateProfit(prod_cost, prod_price);
@@ -41,12 +41,12 @@ public class ProdEntity {
         this.prod_name = prod_name;
     }
 
-    public int getProd_qnt() {
-        return prod_qnt;
+    public int getProd_qty() {
+        return prod_qty;
     }
 
-    public void setProd_qnt(int prod_qnt) {
-        this.prod_qnt = prod_qnt;
+    public void setProd_qty(int prod_qty) {
+        this.prod_qty = prod_qty;
     }
 
     public double getProd_cost() {

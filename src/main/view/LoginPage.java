@@ -1,11 +1,20 @@
 package main.view;
 
 import javax.swing.JOptionPane;
+import main.controller.PageTransitionHandler;
 import main.model.DAO.UserDAO;
 
 public class LoginPage extends javax.swing.JFrame {
+    private PageTransitionHandler pageTHandler;
+    
     public LoginPage() {
         initComponents();
+        
+    }
+    
+    public LoginPage(PageTransitionHandler pageTransitionHandler) {
+        initComponents();
+        this.pageTHandler = pageTransitionHandler;
     }
 
     @SuppressWarnings("unchecked")
@@ -33,7 +42,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         imagePanel.setBackground(new java.awt.Color(0, 9, 36));
 
-        loginImageLabel.setIcon(new javax.swing.ImageIcon("src/resource/image/unicash_image_removebg.png"));
+        loginImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/image/unicash_image_removebg.png"))); // NOI18N
         imagePanel.add(loginImageLabel);
 
         getContentPane().add(imagePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 490));
@@ -44,7 +53,7 @@ public class LoginPage extends javax.swing.JFrame {
         exitLabel.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         exitLabel.setForeground(new java.awt.Color(255, 255, 255));
         exitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitLabel.setIcon(new javax.swing.ImageIcon("src/resource/icons/close_white.png"));
+        exitLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/icons/close_w.png"))); // NOI18N
         exitLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,7 +109,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         loginIconLabel.setBackground(new java.awt.Color(0, 0, 51));
         loginIconLabel.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
-        loginIconLabel.setIcon(new javax.swing.ImageIcon("src/resource/image/unicash_icon_removebg.png"));
+        loginIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/image/unicash_icon_removebg.png"))); // NOI18N
         loginIconLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         loginFormPanel.add(loginIconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 90, 70));
 
@@ -110,7 +119,7 @@ public class LoginPage extends javax.swing.JFrame {
         loginFormPanel.add(tfCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 270, -1));
 
         showPassBtn.setBackground(new java.awt.Color(255, 255, 255));
-        showPassBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/unicash/app/assets/icons/hidePassword.png"))); // NOI18N
+        showPassBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/icons/show.png"))); // NOI18N
         showPassBtn.setBorder(null);
         showPassBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,17 +159,16 @@ public class LoginPage extends javax.swing.JFrame {
         boolean sucessLogin = userDAO.verifyLogin(cnpj, password);
         
         if (sucessLogin) {
-            setVisible(false);
-            MainPage mainDb = new MainPage();
-            mainDb.setVisible(true);
+            pageTHandler.openPage(new ProductPage(pageTHandler));
         } else {
             JOptionPane.showMessageDialog(this, "CNPJ ou senha inválidos.");
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        RegisterPage registerFrame = new RegisterPage();
-        registerFrame.setVisible(true);
+        if(!pageTHandler.isPageOpen(new RegisterPage(pageTHandler))) {
+            pageTHandler.openPage(new RegisterPage(pageTHandler));
+        }
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void showPassBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPassBtnActionPerformed
@@ -171,13 +179,13 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_showPassBtnActionPerformed
 
-//    public static void main(String args[]) {
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new LoginPage().setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new LoginPage().setVisible(true);
+            }
+        });
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;

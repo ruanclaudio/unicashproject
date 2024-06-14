@@ -10,13 +10,6 @@
 <project name="UniCashProject" default="default" basedir=".">
     <description>Builds, tests, and runs the project UniCashProject.</description>
     <import file="nbproject/build-impl.xml"/>
-<!--    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-            </resource>
-         </resources>
-    </build>-->
     <!--
 
     There exist several targets which are by default empty and which can be 

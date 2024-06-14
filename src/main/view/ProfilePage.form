@@ -25,7 +25,9 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="255" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="menuPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="mainPanel" min="-2" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -34,8 +36,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="headerPanel" min="-2" pref="1125" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="menuPanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="divisorPanel" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -46,18 +47,18 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="0" pref="80" max="32767" attributes="0"/>
-              <Component id="mainPanel" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="mainPanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="menuPanel" alignment="1" min="-2" pref="520" max="-2" attributes="0"/>
+              </Group>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="headerPanel" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="menuPanel" min="-2" pref="520" max="-2" attributes="0"/>
-                      <Component id="divisorPanel" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="divisorPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -124,25 +125,27 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="profileNameLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="empressTxtArea" min="-2" pref="400" max="-2" attributes="0"/>
                       <Component id="personalNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="persNameTxtArea" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                       <Component id="emailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="emailTxtArea" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                       <Component id="cnpjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="cnpjTxtArea" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                      <Component id="emailTF" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cnpjTF" max="32767" attributes="0"/>
+                      <Component id="empNameTF" max="32767" attributes="0"/>
+                      <Component id="persNameTF" pref="400" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="115" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="profileImage" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="editProfileBtn" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="profileImage" min="-2" pref="150" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="editProfileBtn" min="-2" pref="120" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
               </Group>
               <Component id="textLabel" max="32767" attributes="0"/>
           </Group>
@@ -153,31 +156,32 @@
                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Component id="textLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="profileNameLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="empressTxtArea" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="personalNameLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="persNameTxtArea" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="emailTxtArea" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="cnpjLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="cnpjTxtArea" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="profileImage" min="-2" pref="180" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="editProfileBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="editProfileBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="profileNameLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="empNameTF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="personalNameLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="persNameTF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="emailTF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="cnpjLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="cnpjTF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="171" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -203,17 +207,17 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="22" green="8" red="1" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="           FOTO DE PERFIL"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                <BevelBorder/>
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder bevelType="1"/>
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
             </Property>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[120, 20]"/>
             </Property>
@@ -221,25 +225,6 @@
               <Dimension value="[120, 20]"/>
             </Property>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="empressTxtArea">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="NOME DA EMPRESA"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="textLabel">
@@ -266,6 +251,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Editar Perfil"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editProfileBtnActionPerformed"/>
@@ -283,25 +271,6 @@
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="persNameTxtArea">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="NOME DA PESSOA DONA DA EMPRESA"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="emailLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -314,44 +283,6 @@
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="emailTxtArea">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="E-MAIL DA EMPRESA"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="cnpjTxtArea">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="CNPJ DA EMPRESA"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="cnpjLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -362,6 +293,82 @@
             </Property>
             <Property name="text" type="java.lang.String" value="CNPJ"/>
             <Property name="alignmentY" type="float" value="0.0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="emailTF">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="12" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cnpjTF">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="12" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="empNameTF">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="12" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="persNameTF">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="12" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
@@ -405,76 +412,39 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="iconSettings" min="-2" pref="27" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="optSettings" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="iconDashboard" alignment="0" max="32767" attributes="0"/>
-                              <Component id="iconSell" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="optDashboard" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="optSell" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="iconAlerts" min="-2" pref="27" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="optProfile" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="optAlert" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Component id="iconProfile" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="45" max="32767" attributes="0"/>
-              </Group>
               <Component id="wellcome" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="logoutBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="calculateTaxBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="myProfileBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="myAlertsBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="myMaterialsBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="myProductsBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                  <Component id="wellcome" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="optDashboard" alignment="0" max="32767" attributes="0"/>
-                      <Component id="iconDashboard" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="optSell" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="iconSell" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="iconAlerts" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="optAlert" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="optProfile" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="iconProfile" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="iconSettings" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace pref="99" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="optSettings" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="wellcome" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="myProductsBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="myMaterialsBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="myAlertsBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="myProfileBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="calculateTaxBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace pref="129" max="32767" attributes="0"/>
+                  <Component id="logoutBtn" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -495,106 +465,155 @@
             <Property name="text" type="java.lang.String" value="BEM-VINDO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="optProfile">
+        <Component class="javax.swing.JButton" name="myProductsBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="20" style="0"/>
+              <Font name="Inter" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Perfil"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/box.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" MEUS PRODUTOS"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="optProfileMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myProductsBtnMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myProductsBtnMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myProductsBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="optSettings">
+        <Component class="javax.swing.JButton" name="myMaterialsBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="20" style="0"/>
+              <Font name="Inter" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xf5;es"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/processing.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="MEUS MATERIAIS"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myMaterialsBtnMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myMaterialsBtnMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myMaterialsBtnActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="optSell">
+        <Component class="javax.swing.JButton" name="myAlertsBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="20" style="0"/>
+              <Font name="Inter" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Vendas"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/bell.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="MEUS ALERTAS"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myAlertsBtnMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myAlertsBtnMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myAlertsBtnActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="optAlert">
+        <Component class="javax.swing.JButton" name="myProfileBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="20" style="0"/>
+              <Font name="Inter" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Alertas"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/user.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="MEU PERFIL"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myProfileBtnMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="myProfileBtnMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myProfileBtnActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="optDashboard">
+        <Component class="javax.swing.JButton" name="calculateTaxBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Inter" size="20" style="0"/>
+              <Font name="Inter" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Dashboard"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/tax.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="CALCULAR IMPOSTOS"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="calculateTaxBtnMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="calculateTaxBtnMouseExited"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="iconDashboard">
+        <Component class="javax.swing.JButton" name="logoutBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Inter" size="14" style="1"/>
+            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/icons/dashboard.png&quot;)" type="code"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resource/icons/power-button.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="SAIR"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
             </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="iconSell">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/icons/sale.png&quot;)" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="iconAlerts">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/icons/bell.png&quot;)" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="iconProfile">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/icons/user.png&quot;)" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="iconSettings">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.ImageIcon(&quot;src/resource/icons/settings.png&quot;)" type="code"/>
-            </Property>
-          </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="logoutBtnMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="logoutBtnMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutBtnActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

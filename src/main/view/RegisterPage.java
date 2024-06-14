@@ -1,10 +1,18 @@
 package main.view;
 
 import javax.swing.JOptionPane;
+import main.controller.PageTransitionHandler;
 import main.model.DAO.UserDAO;
 import main.model.entities.UserEntity;
 
 public class RegisterPage extends javax.swing.JFrame {
+    private PageTransitionHandler pageTHandler;
+    public RegisterPage(PageTransitionHandler pageTransitionHandler) {
+        this.pageTHandler = pageTransitionHandler;
+        initComponents();
+        
+    }
+    
     public RegisterPage() {
         initComponents();
         
@@ -45,7 +53,7 @@ public class RegisterPage extends javax.swing.JFrame {
         exitLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         exitLabel.setForeground(new java.awt.Color(255, 255, 255));
         exitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitLabel.setIcon(new javax.swing.ImageIcon("src/resource/icons/close_white.png"));
+        exitLabel.setIcon(new javax.swing.ImageIcon("src/resource/icons/close_w.png"));
         exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitLabelMouseClicked(evt);
@@ -198,7 +206,9 @@ public class RegisterPage extends javax.swing.JFrame {
             UserEntity newUser = new UserEntity(tfCNPJ.getText(), tfNameEmpress.getText(), tfUserName.getText(), tfEmail.getText(), password);
             uDAO.createNewUser(newUser);
 
-            setVisible(false);
+            if(!pageTHandler.isPageOpen(new LoginPage(pageTHandler))) {
+                pageTHandler.openPage(new LoginPage(pageTHandler));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -209,7 +219,9 @@ public class RegisterPage extends javax.swing.JFrame {
     }//GEN-LAST:event_tfPasswordActionPerformed
 
     private void goBackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackBtnActionPerformed
-        setVisible(false);
+        if(!pageTHandler.isPageOpen(new LoginPage(pageTHandler))) {
+            pageTHandler.openPage(new LoginPage(pageTHandler));
+        }
     }//GEN-LAST:event_goBackBtnActionPerformed
 
     private void tfConfirmPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfConfirmPassActionPerformed
