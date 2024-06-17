@@ -83,7 +83,7 @@ public class MaterialsPage extends javax.swing.JFrame {
 
         logoHeader.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
         logoHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoHeader.setIcon(new javax.swing.ImageIcon("src/resource/image/unicash_icon_removebg.png"));
+        logoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/image/unicash_icon_removebg.png"))); // NOI18N
         headerPanel.add(logoHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 90, 80));
 
         titleLabel.setFont(new java.awt.Font("Inter", 1, 48)); // NOI18N
@@ -101,13 +101,17 @@ public class MaterialsPage extends javax.swing.JFrame {
         jLabel1.setText("MEUS MATERIAIS");
 
         jTMaterials.setBackground(new java.awt.Color(102, 102, 102));
+        jTMaterials.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
         jTMaterials.setForeground(new java.awt.Color(255, 255, 255));
         jTMaterials.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "NOME DO MATERIAL", "VALOR DE CUSTO", "QUANTIDADE", "TIPO DA QUANTIDADE"
+                "ID", "NOME DO MATERIAL", "CUSTO DO MATERIAL", "QUANTIDADE", "TIPO DE MATERIAL"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -118,7 +122,6 @@ public class MaterialsPage extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTMaterials.setPreferredSize(new java.awt.Dimension(450, 0));
         jTMaterials.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTMaterialsMouseClicked(evt);
@@ -130,13 +133,13 @@ public class MaterialsPage extends javax.swing.JFrame {
         tablePanel.setLayout(tablePanelLayout);
         tablePanelLayout.setHorizontalGroup(
             tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 870, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
         );
         tablePanelLayout.setVerticalGroup(
             tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         buttonsPanel.setBackground(new java.awt.Color(1, 8, 34));
@@ -274,7 +277,7 @@ public class MaterialsPage extends javax.swing.JFrame {
                             .addGroup(buttonsPanelLayout.createSequentialGroup()
                                 .addGap(8, 8, 8)
                                 .addComponent(jLabel4)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                         .addGroup(buttonsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(qtyMatTf, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(buttonsPanelLayout.createSequentialGroup()
@@ -321,19 +324,23 @@ public class MaterialsPage extends javax.swing.JFrame {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addComponent(buttonsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(buttonsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tablePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(tablePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(131, 131, 131))
         );
 
         divisorPanel.setBackground(new java.awt.Color(1, 8, 34));
@@ -710,10 +717,10 @@ public class MaterialsPage extends javax.swing.JFrame {
         if(jTMaterials.getSelectedRow() != -1) {
             jTMaterials.getSelectedRow();
             MaterialsDAO mDAO = new MaterialsDAO();
-            MatEntity updateM = new MatEntity();
+            MatEntity deleteM = new MatEntity();
 
-            updateM.setMat_id((int)jTMaterials.getValueAt(jTMaterials.getSelectedRow(), 0));
-            boolean deletedM = mDAO.deleteMaterial(updateM);
+            deleteM.setMat_id((int)jTMaterials.getValueAt(jTMaterials.getSelectedRow(), 0));
+            boolean deletedM = mDAO.deleteMaterial(deleteM);
 
             if(deletedM) {
                 JOptionPane.showMessageDialog(null, "Produto selecionado foi deletado com sucesso.");
@@ -733,11 +740,12 @@ public class MaterialsPage extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteMatBtnActionPerformed
 
     private void jTMaterialsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTMaterialsMouseClicked
-        if(jTMaterials.getSelectedRow() != -1) {
+        if (jTMaterials.getSelectedRow() != -1) {
             nameMatTf.setText(jTMaterials.getValueAt(jTMaterials.getSelectedRow(), 1).toString());
             costMatTf.setText(jTMaterials.getValueAt(jTMaterials.getSelectedRow(), 2).toString());
             qtyMatTf.setText(jTMaterials.getValueAt(jTMaterials.getSelectedRow(), 3).toString());
             qtyTypeTf.setText(jTMaterials.getValueAt(jTMaterials.getSelectedRow(), 4).toString());
+            
         }
     }//GEN-LAST:event_jTMaterialsMouseClicked
 

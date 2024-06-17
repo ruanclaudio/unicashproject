@@ -14,7 +14,9 @@ public class UserEntity {
         this.user_email = user_email;
         this.user_password = user_password;
     }
-
+    public UserEntity() {
+        
+    }
     public String getUser_empName() {
         return user_empName;
     }

@@ -3,7 +3,10 @@ package main.view;
 import javax.swing.JOptionPane;
 import main.controller.PageManager;
 import main.controller.PageTransitionHandler;
-import main.view.dialogs.EditProfile;
+import main.view.AlertsPage;
+import main.view.LoginPage;
+import main.view.MaterialsPage;
+import main.view.ProductPage;
 
 public class ProfilePage extends javax.swing.JFrame {
     private PageTransitionHandler pageTHandler;
@@ -17,7 +20,11 @@ public class ProfilePage extends javax.swing.JFrame {
     public ProfilePage() {
         initComponents();
     }
+    
+    
+    private void fillProfileFields() {
 
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -55,8 +62,7 @@ public class ProfilePage extends javax.swing.JFrame {
 
         logoHeader.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
         logoHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoHeader.setIcon(new javax.swing.ImageIcon("src/resource/image/unicash_icon_removebg.png"));
-        logoHeader.setText("unicash_logo");
+        logoHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/image/unicash_icon_removebg.png"))); // NOI18N
         headerPanel.add(logoHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 90, 80));
 
         titleLabel.setFont(new java.awt.Font("Inter", 1, 48)); // NOI18N
@@ -131,6 +137,11 @@ public class ProfilePage extends javax.swing.JFrame {
         empNameTF.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
         empNameTF.setForeground(new java.awt.Color(51, 51, 51));
         empNameTF.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        empNameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empNameTFActionPerformed(evt);
+            }
+        });
 
         persNameTF.setEditable(false);
         persNameTF.setBackground(new java.awt.Color(204, 204, 204));
@@ -400,6 +411,7 @@ public class ProfilePage extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
                     .addComponent(divisorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
@@ -409,8 +421,7 @@ public class ProfilePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void editProfileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editProfileBtnActionPerformed
-        EditProfile editPf = new EditProfile();
-        editPf.setVisible(true);
+
     }//GEN-LAST:event_editProfileBtnActionPerformed
 
     private void myProductsBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myProductsBtnMouseEntered
@@ -491,6 +502,10 @@ public class ProfilePage extends javax.swing.JFrame {
             pageTHandler.openPage(new LoginPage(pageTHandler));
         }
     }//GEN-LAST:event_logoutBtnActionPerformed
+
+    private void empNameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empNameTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empNameTFActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

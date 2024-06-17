@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import main.controller.PageTransitionHandler;
 import main.model.DAO.UserDAO;
 import main.model.entities.UserEntity;
+import main.view.LoginPage;
 
 public class RegisterPage extends javax.swing.JFrame {
     private PageTransitionHandler pageTHandler;
@@ -53,7 +54,7 @@ public class RegisterPage extends javax.swing.JFrame {
         exitLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         exitLabel.setForeground(new java.awt.Color(255, 255, 255));
         exitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitLabel.setIcon(new javax.swing.ImageIcon("src/resource/icons/close_w.png"));
+        exitLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/icons/close_w.png"))); // NOI18N
         exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitLabelMouseClicked(evt);
@@ -169,7 +170,7 @@ public class RegisterPage extends javax.swing.JFrame {
         iconPanel.setBackground(new java.awt.Color(0, 9, 36));
 
         registerImageLabel.setBackground(new java.awt.Color(0, 9, 36));
-        registerImageLabel.setIcon(new javax.swing.ImageIcon("src/resource/image/unicash_image_removebg.png"));
+        registerImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/image/unicash_image_removebg.png"))); // NOI18N
         registerImageLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         iconPanel.add(registerImageLabel);
 
@@ -204,10 +205,14 @@ public class RegisterPage extends javax.swing.JFrame {
 
             UserDAO uDAO = new UserDAO();
             UserEntity newUser = new UserEntity(tfCNPJ.getText(), tfNameEmpress.getText(), tfUserName.getText(), tfEmail.getText(), password);
-            uDAO.createNewUser(newUser);
-
-            if(!pageTHandler.isPageOpen(new LoginPage(pageTHandler))) {
-                pageTHandler.openPage(new LoginPage(pageTHandler));
+            boolean sucessRegister = uDAO.createNewUser(newUser);
+            if (sucessRegister) {
+                JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
+                if(!pageTHandler.isPageOpen(new LoginPage(pageTHandler))) {
+                    pageTHandler.openPage(new LoginPage(pageTHandler));
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Error! Falha ao cadastrar usuário.");
             }
         } catch (Exception e) {
             e.printStackTrace();
